@@ -1,0 +1,6 @@
+CREATE or ALTER PROCEDURE loginUser(@Email VARCHAR(200))
+AS
+BEGIN
+    SELECT * FROM Users WHERE Email = @Email
+END
+

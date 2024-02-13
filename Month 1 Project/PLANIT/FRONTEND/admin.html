@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="admin.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+  </head>
+  <body>
+    <nav>
+      <div class="all">
+        <div class="icon">
+          <img src="Assets/icons8-planet-50.png" alt="" />
+          PLANIT MANAGEMENT
+        </div>
+      </div>
+      <div class="dash">DASHBOARD</div>
+      <div class="sign">
+        <button class="logout_btn"><a href="login.html">LOGOUT </a></button>
+      </div>
+    </nav>
+    <div class="sideTab">
+      <div class="buttons">
+        <button class="add">ADD A PROJECT</button>
+        <button class="assign">REASSIGN A PROJECT</button>
+        <button class="allProj">ALL PROJECTS</button>
+      </div>
+    </div>
+    <div class="cart-container" style="display: none">
+      <h2>NEW PROJECT</h2>
+      <div class="line">
+        <input type="Project name" placeholder="Project Name" />
+        <select name="Assign Member" id="member">
+          <option value="Assign User">Assign User</option>
+        </select>
+      
+      <input type="Description" placeholder="Description" />
+      <input type="End date" placeholder="End date" />
+      <button class="addBtn">Add Project</button>
+    </div>
+    </div>
+
+    <!-- REASSIGN -->
+
+    <div class="cart-container2" style="display: none">
+      <!-- <p class="title">REASSIGNING PROJECT</p> -->
+
+      <h2>REASSIGN</h2>
+      <div class="line2">
+        <input type="Project name" placeholder="Project Name" />
+        <select name="Assign Member" id="member">
+          <option value="Assign User">Assign User</option>
+        </select>
+      
+      <input type="Description" placeholder="Description" />
+      <input type="End date" placeholder="End date" />
+      <button class="resBtn">REASSIGN A PROJECT</button>
+    </div>
+  </div>
+
+    <!-- ALL PROJECTS  -->
+    <div class="project" style="display: none">
+      <h3>MY PROJECTS</h3>
+      <table class="styled-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Project Name</th>
+            <th>Assigned-User</th>
+            <th>Start-Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="checkbox" /></td>
+            <td>Water commisioning</td>
+            <td>User 1</td>
+            <td>14/2/2024</td>
+          </tr>
+          <tr class="active-row">
+            <td><input type="checkbox" /></td>
+            <td>Power Automation</td>
+            <td>User 3</td>
+            <td>17/2/2024</td>
+          </tr>
+          <tr class="active-row">
+            <td><input type="checkbox" /></td>
+            <td>Power Automation</td>
+            <td>User 3</td>
+            <td>17/2/2024</td>
+          </tr>
+          <tr class="active-row">
+            <td><input type="checkbox" /></td>
+            <td>Power Automation</td>
+            <td>User 3</td>
+            <td>17/2/2024</td>
+          </tr>
+          <tr class="active-row">
+            <td><input type="checkbox" /></td>
+            <td>Power Automation</td>
+            <td>User 3</td>
+            <td>17/2/2024</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+  <script src="/FRONTEND/dist/admin.js"></script>
+</html>

@@ -1,0 +1,46 @@
+###
+
+POST http://localhost:3001/user/signup
+Content-Type: application/json
+
+{
+  "Full_name": "John Doe",
+  "Email": "john@example.com",
+  "Password": "password123"
+}
+
+
+###
+
+POST http://localhost:3002/user/login
+Content-Type: application/json
+
+{
+  "Email": "john@example.com",
+  "Password": "password123"
+}
+
+###
+
+POST  http://localhost:3002/projects/create
+Content-Type: application/json
+
+{
+          "ProjectName": " Disturb Ken",
+          "ProjectDescription": " This is a goal to disturb Kenny",
+          "AssignedTo": "Sharon Cheruto",
+          "AssigneeName": "Sharon Cheruto",
+          "EndDate": "12/12/2024" 
+}
+
+
+###
+
+DELETE http://localhost:3002/projects/delete/:id
+Content-Type: application/json
+
+{
+
+    "Project_id": "0825170c-613d-4606-8777-ff1355e38980"
+
+}
