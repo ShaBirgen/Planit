@@ -9,6 +9,8 @@ Content-Type: application/json
   "Password": "password123"
 }
 
+###
+GET http://localhost:3002/user/allusers
 
 ###
 

@@ -1,3 +1,5 @@
-USE Planit
-
-SELECT * FROM Projects
+CREATE OR ALTER PROCEDURE allProjects
+AS
+BEGIN
+    SELECT * FROM Projects
+END

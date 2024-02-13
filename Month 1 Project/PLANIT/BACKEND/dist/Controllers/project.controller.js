@@ -12,11 +12,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.deleteProject = exports.createProject = void 0;
+exports.allProjects = exports.deleteProject = exports.createProject = void 0;
 const uuid_1 = require("uuid");
 const mssql_1 = __importDefault(require("mssql"));
 const sqlConfig_1 = require("../Config/sqlConfig");
-exports.createProject = ((req, res) => __awaiter(void 0, void 0, void 0, function* () {
+const createProject = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const id = (0, uuid_1.v4)();
         const { ProjectName, ProjectDescription, AssignedTo, AssigneeName, EndDate, } = req.body;
@@ -32,15 +32,16 @@ exports.createProject = ((req, res) => __awaiter(void 0, void 0, void 0, functio
             .execute("createProject")).recordset;
         res.status(200).json({
             message: "Project created successfully",
-            result
+            result,
         });
     }
     catch (error) {
         res.status(500).json({
-            error
+            error,
         });
     }
-}));
+});
+exports.createProject = createProject;
 //DELETE PROJECT
 const deleteProject = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
@@ -67,3 +68,19 @@ const deleteProject = (req, res) => __awaiter(void 0, void 0, void 0, function* 
     }
 });
 exports.deleteProject = deleteProject;
+const allProjects = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const pool = yield mssql_1.default.connect(sqlConfig_1.sqlConfig);
+        let result = (yield pool.request().execute("allProjects")).recordset;
+        res.status(200).json({
+            result,
+        });
+    }
+    catch (error) {
+        console.log(error);
+        res.status(500).json({
+            error,
+        });
+    }
+});
+exports.allProjects = allProjects;
