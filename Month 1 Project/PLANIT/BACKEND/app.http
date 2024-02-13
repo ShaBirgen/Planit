@@ -4,45 +4,45 @@ POST http://localhost:3001/user/signup
 Content-Type: application/json
 
 {
-  "Full_name": "John Doe",
-  "Email": "john@example.com",
-  "Password": "password123"
+  "Full_name": "Amanda Chepkoech",
+  "Email": "amanda@example.com",
+  "Password": "password1234"
 }
 
-###
-GET http://localhost:3002/user/allusers
 
 ###
 
-POST http://localhost:3002/user/login
+POST http://localhost:3001/user/login
 Content-Type: application/json
 
 {
-  "Email": "john@example.com",
-  "Password": "password123"
+  "Email": "amanda@example.com",
+  "Password": "password1234"
 }
 
 ###
 
-POST  http://localhost:3002/projects/create
+POST  http://localhost:3001/projects/create
 Content-Type: application/json
 
 {
-          "ProjectName": " Disturb Ken",
-          "ProjectDescription": " This is a goal to disturb Kenny",
-          "AssignedTo": "Sharon Cheruto",
-          "AssigneeName": "Sharon Cheruto",
-          "EndDate": "12/12/2024" 
+          "ProjectName": " Biking",
+          "ProjectDescription": " Go for a ride",
+          "AssignedTo": "Cherotich Sharon",
+          "AssigneeName": "Cherotich Sharon",
+          "EndDate": "14/02/2024" 
 }
+###
+
+GET http://localhost:3001/projects/allprojects
+
+###
+
+GET  http://localhost:3001/users/allusers
 
 
 ###
 
-DELETE http://localhost:3002/projects/delete/:id
+DELETE http://localhost:3001/projects/delete/A7048D47-57D3-4562-B3F0-714152710511
 Content-Type: application/json
 
-{
-
-    "Project_id": "0825170c-613d-4606-8777-ff1355e38980"
-
-}

@@ -19,7 +19,7 @@ body {
   height: 79vh;
   background-size: cover;
   background-position: center;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 .icon > img {
   /* background-color: white; */
@@ -29,7 +29,7 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 25px;
+  font-size: 20px;
 }
 nav {
   height: 20vh;
@@ -59,7 +59,7 @@ nav {
   }
 }
 .dash {
-  font-size: 50px;
+  font-size: 40px;
   font-style: italic;
   text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.3), 2px 2px 1px black;
 }
@@ -71,11 +71,17 @@ nav {
   border-radius: 10px;
   border: none;
   background-color: #df1f1f;
-  text-decoration: none;
+  text-decoration-line: none;
 }
 .logout_btn:hover {
   height: 8.5vh;
   background-color: red;
+  text-decoration-line: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
 }
 
 .sideTab {
@@ -151,7 +157,7 @@ h2 {
 .line {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
   input {
     border: 1px solid black;
     background-color: #b2c8e5;
@@ -164,9 +170,9 @@ h2 {
   select {
     border: 1px solid black;
     background-color: #b2c8e5;
-    border-radius: 5px;
-    height: 30px;
-    width: 20rem;
+    border-radius: 10px;
+    height: 40px;
+    width: 21rem;
   }
 }
 .cart-container > input {

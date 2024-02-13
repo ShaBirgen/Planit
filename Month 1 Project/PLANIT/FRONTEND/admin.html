@@ -27,17 +27,23 @@
       </div>
     </div>
     <div class="cart-container" style="display: none">
-      <h2>NEW PROJECT</h2>
-      <div class="line">
-        <input type="Project name" placeholder="Project Name" />
-        <select name="Assign Member" id="member">
-          <option value="Assign User">Assign User</option>
-        </select>
-      
-      <input type="Description" placeholder="Description" />
-      <input type="End date" placeholder="End date" />
-      <button class="addBtn">Add Project</button>
-    </div>
+      <form class="new-form">
+        <h2>NEW PROJECT</h2>
+        <div class="line">
+          <input
+            type="Project name"
+            placeholder="Project Name"
+            id="project-name"
+          />
+          <select name="Assign Member" id="assignee">
+            <option value="Assign User">Assign User</option>
+          </select>
+
+          <input type="Description" placeholder="Description" id="desc" />
+          <input type="date" placeholder="End date" id="end-date" />
+          <button type="submit" class="addBtn">Add Project</button>
+        </div>
+      </form>
     </div>
 
     <!-- REASSIGN -->
@@ -51,12 +57,12 @@
         <select name="Assign Member" id="member">
           <option value="Assign User">Assign User</option>
         </select>
-      
-      <input type="Description" placeholder="Description" />
-      <input type="End date" placeholder="End date" />
-      <button class="resBtn">REASSIGN A PROJECT</button>
+
+        <input type="Description" placeholder="Description" />
+        <input type="End date" placeholder="End date" />
+        <button class="resBtn">REASSIGN A PROJECT</button>
+      </div>
     </div>
-  </div>
 
     <!-- ALL PROJECTS  -->
     <div class="project" style="display: none">
@@ -66,44 +72,22 @@
           <tr>
             <th>#</th>
             <th>Project Name</th>
+            <th>Project Description</th>
             <th>Assigned-User</th>
             <th>Start-Date</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <!-- <tr>
             <td><input type="checkbox" /></td>
             <td>Water commisioning</td>
             <td>User 1</td>
             <td>14/2/2024</td>
-          </tr>
-          <tr class="active-row">
-            <td><input type="checkbox" /></td>
-            <td>Power Automation</td>
-            <td>User 3</td>
-            <td>17/2/2024</td>
-          </tr>
-          <tr class="active-row">
-            <td><input type="checkbox" /></td>
-            <td>Power Automation</td>
-            <td>User 3</td>
-            <td>17/2/2024</td>
-          </tr>
-          <tr class="active-row">
-            <td><input type="checkbox" /></td>
-            <td>Power Automation</td>
-            <td>User 3</td>
-            <td>17/2/2024</td>
-          </tr>
-          <tr class="active-row">
-            <td><input type="checkbox" /></td>
-            <td>Power Automation</td>
-            <td>User 3</td>
-            <td>17/2/2024</td>
-          </tr>
+          </tr> -->
         </tbody>
       </table>
     </div>
   </body>
   <script src="/FRONTEND/dist/admin.js"></script>
+  <!-- <script src="/FRONTEND/dist/createProject.js"></script> -->
 </html>
